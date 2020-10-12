@@ -1,2 +1,2 @@
 # CommandLine-Sudoku
-A small scool-projekt made in Java
+A small school project made with Java
