@@ -4,8 +4,10 @@ A small school project made with Java
 
 ##TODO
 - [x] Make & Decide UI Design
-- [ ] Make & Decide UX Design
-- [ ] Class Diagramm
+- [x] Make & Decide UX Design
+- [ ] Class & Sequence Diagramm
 - [ ] Realisierung
-    - [ ] 'Placeholder for classes'
+    - [ ] IO & Template Classes
+    - [ ] Field Classes
+    - [ ] Main Functionality
 - [ ] Debugging & Features
