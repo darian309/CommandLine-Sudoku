@@ -5,15 +5,14 @@ import Comp.Solve.Solve;
 public class Field {
     private SmallField[] Field;
 
-    public Field(){
+    private Field(){
         Field = new SmallField[9];
         for(int i=0;i<=8;i++){
             Field[i] = new SmallField();
         }
     }
-    public void setZero(int[]Location){
-        Field[Location[0]].Change(Location[1],0);
-    }
+
+
 
     public void SetField(int[] Location, int Wert){
         Field[Location[0]].Change(Location[1],Wert);
@@ -22,13 +21,9 @@ public class Field {
         int[] Location = LocateField(FieldLocation);
         Field[Location[0]].Change(Location[1],Wert);
     }
-    public void SetUserField(int[] Location, int Wert){
-        Field[Location[0]].ChangeUserValue(Location[1],Wert);
-        SetField(Location, Wert);
-    }
-    public void SetUserField(String FieldLocation, int Wert){
-        int[] Location = LocateField(FieldLocation);
-        SetUserField(FieldLocation, Wert);
+
+    public SmallField[] FieldForDiego() {
+        return Field; // Field[int].getValue(int);
     }
 
     private int[] LocateField(String Location) {
@@ -49,10 +44,18 @@ public class Field {
         return result;
     }
 
-    public int[] getFormattedField(){
+<<<<<<< HEAD
+
+    public SmallField[] FieldForDiego() {
+        return Field; // Field[int].getValue(int);
+    }
+
+=======
+>>>>>>> e3365588d04180b32bc248ab47852e81b27a0b61
+    public int[] getFormatedField(){
         int[] values = new int[81];
         int i;
-        // put values of Fields in a Row for Row order
+        // put values of Fields in a Ro for Row order
         for(i= 0;i<= 2;i++){values[i] = Field[0].getValue(i);}//
         for(i= 3;i<= 5;i++){values[i] = Field[1].getValue(i-3);}
         for(i= 6;i<= 8;i++){values[i] = Field[2].getValue(i-6);}
@@ -87,12 +90,7 @@ public class Field {
     }
 
     public boolean SolveSudoku() {
-        int[] FField = getFormattedField();
+        int[] FField = getFormatedField();
         return Solve.Solve(FField, Field);
     }
 }
-
-//getFormattedField()
-//getField()
-//SolveSudoku()
-//SetUserField()
