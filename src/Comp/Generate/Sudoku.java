@@ -1,8 +1,13 @@
 package Comp.Generate;
 
 import Fields.Field;
+import IO.userInteraction;
 
 public class Sudoku {
+    public static void main(){
+        String[] s = new String[1];
+        userInteraction.main(s);
+    }
     public static Field Sudoku(){
         int[] row = new int[9];
         int[][] Colomn = new int[9][9];
@@ -21,6 +26,7 @@ public class Sudoku {
                 }
             }
         }
+        System.out.print("Something");
         return  game;
     }
 
