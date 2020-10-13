@@ -1,5 +1,7 @@
 package Fields;
 
+import Comp.Solve.Solve;
+
 public class Field {
     private SmallField[] Field;
 
@@ -36,7 +38,9 @@ public class Field {
     }
 
 
-
+    public SmallField[] FieldForDiego() {
+        return Field; // Field[int].getValue(int);
+    }
 
     public int[] getFormatedField(){
         int[] values = new int[81];
@@ -73,5 +77,10 @@ public class Field {
     }
     public SmallField[] getField(){
         return Field;
+    }
+
+    public boolean SolveSudoku() {
+        int[] FField = getFormatedField();
+        return Solve.Solve(FField, Field);
     }
 }
