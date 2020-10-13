@@ -26,7 +26,6 @@ public class Sudoku {
                 }
             }
         }
-        System.out.print("Something");
         return  game;
     }
 

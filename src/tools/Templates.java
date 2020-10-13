@@ -19,6 +19,63 @@ public class Templates {
     public static final String CYAN = "\u001B[36m";
     public static final String WHITE = "\u001B[37m";
 
+    public static void clearScreen() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
+
+    public static void printError(String msg){
+
+        String error = "[" + Templates.RED + "!" + Templates.RESET + "]" + msg;
+
+    }
+
+    public static void printCell(){
+
+
+        String one =
+                PURPLE + "┌──────────────────┐\n" +
+                "│                  │\n" +
+                "│      " + GREEN + "▀▀▀▀▀▀" + PURPLE +"      │\n" +
+                PURPLE + "│    " + GREEN + "▀▀    ▀▀" + PURPLE + "      │\n" +
+                "│          " + GREEN + "▀▀" + PURPLE + "      │\n" +
+                "│          " + GREEN + "▀▀" + PURPLE + "      │\n" +
+                "│          " + GREEN + "▀▀" + PURPLE + "      │\n" +
+                "│     " + GREEN + "▀▀▀▀▀▀▀▀▀" + PURPLE + "    │\n" +
+                PURPLE + "│                  │\n" +
+                "└──────────────────┘" + RESET;
+
+        System.out.println(one);
+
+        String three =
+                PURPLE + "┌──────────────────┐\n" +
+                "│                  │\n" +
+                "│    " + GREEN + "▀▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
+                "│            " + GREEN + "▀▀" + PURPLE + "    │\n" +
+                "│          " + GREEN + "▀▀▀▀ " + PURPLE +  "   │\n" +
+                "│          " + GREEN + "▀▀▀▀ " + PURPLE +  "   │\n" +
+                "│            " + GREEN + "▀▀" + PURPLE + "    │\n" +
+                "│    " + GREEN + "▀▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
+                "│                  │\n" +
+                "└──────────────────┘" + RESET;
+
+        System.out.println(three);
+
+        String seven =
+                PURPLE + "┌──────────────────┐\n" +
+                "│                  │\n" +
+                "│    " + GREEN + "▀▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
+                "│    " + GREEN + "▀▀     ▀▀" + PURPLE + "     │\n" +
+                "│           " + GREEN + "▀▀" + PURPLE + "     │\n" +
+                "│           " + GREEN + "▀▀" + PURPLE + "     │\n" +
+                "│           " + GREEN + "▀▀" + PURPLE + "     │\n" +
+                "│           " + GREEN + "▀▀" + PURPLE + "     │\n" +
+                "│                  │\n" +
+                "└──────────────────┘" + RESET;
+
+        System.out.println(seven);
+
+    }
 
     public static void printBoard(Field Field) {
 

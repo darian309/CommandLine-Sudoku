@@ -8,7 +8,10 @@ import java.util.Scanner;
 
 public class userInteraction {
     Field Game;
-    public static void main(String[] args) {
+    public static void main(String[] args){
+
+        Templates.clearScreen();
+
         String Input;
         Field Game = Sudoku.Sudoku();
         LoadingScreen();
@@ -38,15 +41,15 @@ public class userInteraction {
             if(coordinate.charAt(1) <= 48 || coordinate.charAt(1) >= 57){System.out.println("Your value is not correct!");return;}
             Scanner sc = new Scanner(System.in);
             //Templates.printCell();
-            System.out.println("\nPlease input new value for this cell!");
+            System.out.println(Templates.YELLOW + "\nPlease input new value for this cell!" + Templates.RESET);
             System.out.print("$");
             int Value = sc.nextInt();
             if(Value<=1 || Value >= 9){
-                System.out.println("New value cant be accepted!");
+                System.out.println(Templates.RED + "New value can't be accepted!" + Templates.RESET);
                 return;
             }else{
                 if(!Game.getUserValue(Input)) {
-                    System.out.println("Value cant be changed");
+                    System.out.println(Templates.RED + "Value cant be changed" + Templates.RESET);
                 }else{
                     Game.SetUserField(Input,Value);
                 }
@@ -59,7 +62,7 @@ public class userInteraction {
     }
     private static boolean ContinueButton(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Do you want to continue?[y/n]");
+        System.out.println(Templates.YELLOW + "Do you want to continue?[y/n]" + Templates.RESET);
         System.out.print("$");
         if(sc.nextLine().contains("exit")){
             return true;
@@ -72,28 +75,27 @@ public class userInteraction {
 
     public static String selectField(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Please Type:");
+        System.out.println(Templates.YELLOW + "Please Type:");
         System.out.println(" - 'y-axis':'x-axis' to select a Field");
         System.out.println(" - 'finish' to let the computer validate the field");
-        System.out.println(" - 'exit' to exit the game");
-        System.out.print("$");
+        System.out.println(" - 'exit' to exit the game\n" + Templates.RESET);
+        System.out.print("$ ");
+        Templates.clearScreen();
+        Templates.printCell();
         return sc.nextLine();
     }
-    private void printError(String msg){
 
-        String error = "[" + Templates.RED + "!" + Templates.RESET + "]" + msg;
-
-    }
     private static void LoadingScreen(){
 
         try {
-            System.out.print("Loading.");
+            System.out.print(Templates.GREEN + "Loading.");
             Thread.sleep(500);
             System.out.print(" .");
             Thread.sleep(500);
             System.out.print(" .");
             Thread.sleep(500);
-            System.out.println(" .\n");
+            System.out.println(" .\n" + Templates.RESET);
+            Templates.clearScreen();
         }catch (InterruptedException e){}
 
 
