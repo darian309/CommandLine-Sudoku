@@ -5,9 +5,9 @@ A small school project made with Java
 ##TODO
 - [x] Make & Decide UI Design
 - [x] Make & Decide UX Design
-- [ ] Class & Sequence Diagramm
+- [x] Class & Sequence Diagramm
 - [ ] Realisierung
-    - [ ] IO & Template Classes
+    - [x] IO & Template Classes
     - [x] Field Classes
     - [ ] Main Functionality
     - [x] Solve Class
@@ -23,3 +23,10 @@ Solve Class; create Class;
 
 Wednesday:
 main Functionality; Debugging;
+
+issue Tracker:
+- colomns not differenciated
+- Field class converter funcions math revise
+- review diagramms
+- printCell function
+- colored UserValues
