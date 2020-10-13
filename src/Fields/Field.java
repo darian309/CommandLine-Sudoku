@@ -3,7 +3,7 @@ package Fields;
 public class Field {
     private SmallField[] Field;
 
-    Field(){
+    private Field(){
         Field = new SmallField[9];
         for(int i=0;i<=8;i++){
             Field[i] = new SmallField();
@@ -19,11 +19,18 @@ public class Field {
         int[] Location = LocateField(FieldLocation);
         Field[Location[0]].Change(Location[1],Wert);
     }
+
+    public SmallField[] FieldForDiego() {
+        return Field; // Field[int].getValue(int);
+    }
+
     private int[] LocateField(String Location) {
         //TODO: Error Handling
         int y = (int) Location.charAt(0);
         int x = (int) Location.charAt(1);
         int[] result = new int[2];
+        SmallField hey = new SmallField();
+
 
         //Return Quadrant
         result[0] = x/3;
@@ -34,9 +41,6 @@ public class Field {
         result[1] = (x/3)+((y/3)-1);
         return result;
     }
-
-
-
 
     public int[] getFormatedField(){
         int[] values = new int[81];
