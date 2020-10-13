@@ -5,7 +5,7 @@ import Comp.Solve.Solve;
 public class Field {
     private SmallField[] Field;
 
-    private Field(){
+    Field(){
         Field = new SmallField[9];
         for(int i=0;i<=8;i++){
             Field[i] = new SmallField();
@@ -44,14 +44,6 @@ public class Field {
         return result;
     }
 
-<<<<<<< HEAD
-
-    public SmallField[] FieldForDiego() {
-        return Field; // Field[int].getValue(int);
-    }
-
-=======
->>>>>>> e3365588d04180b32bc248ab47852e81b27a0b61
     public int[] getFormatedField(){
         int[] values = new int[81];
         int i;
