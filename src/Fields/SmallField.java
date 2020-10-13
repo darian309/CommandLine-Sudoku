@@ -23,5 +23,5 @@ public class SmallField {
     public int getValue(int location) {
         return SField[location];
     }
-    public boolean getIfUserValue(int wert){return ifUserInput[wert];}
+    public boolean getUserValue(int wert){return ifUserInput[wert];}
 }

@@ -1,5 +1,7 @@
 package tools;
 
+import Fields.Field;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
@@ -17,29 +19,8 @@ public class Templates {
     public static final String CYAN = "\u001B[36m";
     public static final String WHITE = "\u001B[37m";
 
-    public static void main(String[] args) {
-
-        Field passedField = new Field();
-
-        printBoard(Field);
-
-    }
 
     public static void printBoard(Field Field) {
-
-    /*
-        int[] bsp = new int[81];
-
-        Random rand = new Random();
-
-        for (int i = 0; i < 81; i++) {
-
-            int rand_int1 = rand.nextInt(10);
-            bsp[i] = rand_int1;
-
-        }
-
-     */
 
         String header = "   ┌───┬───┬───┐║┌───┬───┬───┐║┌───┬───┬───┐";
         String intersection = "   ├───┼───┼───┤║├───┼───┼───┤║├───┼───┼───┤";

@@ -14,7 +14,7 @@ public class Sudoku {
             for(int i=0;i<=8;i++){
                 Location[0]=f; Location[1]=i;
                 if(Math.random() <= 0.35){
-                    number = (int) Math.random()*8+1;
+                    number = (int) (Math.random()*8)+1;
                     if(!exists(row,SmallField,Colomn[i], number)){
                         game.SetField(Location,number);
                     }
