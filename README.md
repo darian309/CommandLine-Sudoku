@@ -8,7 +8,7 @@ A small school project made with Java
 - [ ] Class & Sequence Diagramm
 - [ ] Realisierung
     - [ ] IO & Template Classes
-    - [ ] Field Classes
+    - [x] Field Classes
     - [ ] Main Functionality
     - [ ] Solve Class
     - [ ] Create Class
