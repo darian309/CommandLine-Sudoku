@@ -20,3 +20,4 @@ issue Tracker:
 - review diagramms
 - printCell function
 - colored UserValues
+- Debug Sudoku generation(Repeated Values)

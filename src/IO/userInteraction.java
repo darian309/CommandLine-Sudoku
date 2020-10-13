@@ -41,15 +41,15 @@ public class userInteraction {
             if(coordinate.charAt(1) <= 48 || coordinate.charAt(1) >= 57){System.out.println("Your value is not correct!");return;}
             Scanner sc = new Scanner(System.in);
             //Templates.printCell();
-            System.out.println("\nPlease input new value for this cell!");
+            System.out.println(Templates.YELLOW + "\nPlease input new value for this cell!" + Templates.RESET);
             System.out.print("$");
             int Value = sc.nextInt();
             if(Value<=1 || Value >= 9){
-                System.out.println("New value can't be accepted!");
+                System.out.println(Templates.RED + "New value can't be accepted!" + Templates.RESET);
                 return;
             }else{
                 if(!Game.getUserValue(Input)) {
-                    System.out.println("Value cant be changed");
+                    System.out.println(Templates.RED + "Value cant be changed" + Templates.RESET);
                 }else{
                     Game.SetUserField(Input,Value);
                 }
@@ -62,7 +62,7 @@ public class userInteraction {
     }
     private static boolean ContinueButton(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Do you want to continue?[y/n]");
+        System.out.println(Templates.YELLOW + "Do you want to continue?[y/n]" + Templates.RESET);
         System.out.print("$");
         if(sc.nextLine().contains("exit")){
             return true;
@@ -80,6 +80,8 @@ public class userInteraction {
         System.out.println(" - 'finish' to let the computer validate the field");
         System.out.println(" - 'exit' to exit the game\n" + Templates.RESET);
         System.out.print("$ ");
+        Templates.clearScreen();
+        Templates.printCell();
         return sc.nextLine();
     }
 

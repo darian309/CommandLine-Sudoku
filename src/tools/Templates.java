@@ -30,6 +30,52 @@ public class Templates {
 
     }
 
+    public static void printCell(){
+
+
+        String one =
+                PURPLE + "┌──────────────────┐\n" +
+                "│                  │\n" +
+                "│      " + GREEN + "▀▀▀▀▀▀" + PURPLE +"      │\n" +
+                PURPLE + "│    " + GREEN + "▀▀    ▀▀" + PURPLE + "      │\n" +
+                "│          " + GREEN + "▀▀" + PURPLE + "      │\n" +
+                "│          " + GREEN + "▀▀" + PURPLE + "      │\n" +
+                "│          " + GREEN + "▀▀" + PURPLE + "      │\n" +
+                "│     " + GREEN + "▀▀▀▀▀▀▀▀▀" + PURPLE + "    │\n" +
+                PURPLE + "│                  │\n" +
+                "└──────────────────┘" + RESET;
+
+        System.out.println(one);
+
+        String three =
+                PURPLE + "┌──────────────────┐\n" +
+                "│                  │\n" +
+                "│    " + GREEN + "▀▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
+                "│            " + GREEN + "▀▀" + PURPLE + "    │\n" +
+                "│          " + GREEN + "▀▀▀▀ " + PURPLE +  "   │\n" +
+                "│          " + GREEN + "▀▀▀▀ " + PURPLE +  "   │\n" +
+                "│            " + GREEN + "▀▀" + PURPLE + "    │\n" +
+                "│    " + GREEN + "▀▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
+                "│                  │\n" +
+                "└──────────────────┘" + RESET;
+
+        System.out.println(three);
+
+        String seven =
+                PURPLE + "┌──────────────────┐\n" +
+                "│                  │\n" +
+                "│    " + GREEN + "▀▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
+                "│    " + GREEN + "▀▀     ▀▀" + PURPLE + "     │\n" +
+                "│           " + GREEN + "▀▀" + PURPLE + "     │\n" +
+                "│           " + GREEN + "▀▀" + PURPLE + "     │\n" +
+                "│           " + GREEN + "▀▀" + PURPLE + "     │\n" +
+                "│           " + GREEN + "▀▀" + PURPLE + "     │\n" +
+                "│                  │\n" +
+                "└──────────────────┘" + RESET;
+
+        System.out.println(seven);
+
+    }
 
     public static void printBoard(Field Field) {
 
