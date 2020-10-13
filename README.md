@@ -10,8 +10,8 @@ A small school project made with Java
     - [ ] IO & Template Classes
     - [x] Field Classes
     - [ ] Main Functionality
-    - [ ] Solve Class
-    - [ ] Create Class
+    - [x] Solve Class
+    - [x] Create Class
 - [ ] Debugging & Features
 
 Workplan:
