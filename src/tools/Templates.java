@@ -7,9 +7,9 @@ import java.util.Random;
 
 public class Templates {
 
-    private static final String RESET = "\u001B[0m";
+    public static final String RESET = "\u001B[0m";
     public static final String BLACK = "\u001B[30m";
-    private static final String RED = "\u001B[31m";
+    public static final String RED = "\u001B[31m";
     public static final String GREEN = "\u001B[32m";
     public static final String YELLOW = "\u001B[33m";
     public static final String BLUE = "\u001B[34m";
@@ -19,14 +19,15 @@ public class Templates {
 
     public static void main(String[] args) {
 
-        // Field passedField = new Field();
+        Field passedField = new Field();
 
-        printBoard();
+        printBoard(Field);
 
     }
 
-    public static void printBoard(/*Field Field*/) {
+    public static void printBoard(Field Field) {
 
+    /*
         int[] bsp = new int[81];
 
         Random rand = new Random();
@@ -38,6 +39,7 @@ public class Templates {
 
         }
 
+     */
 
         String header = "   ┌───┬───┬───┐║┌───┬───┬───┐║┌───┬───┬───┐";
         String intersection = "   ├───┼───┼───┤║├───┼───┼───┤║├───┼───┼───┤";
@@ -48,24 +50,9 @@ public class Templates {
 
         String[] Stringarray = new String[81];
 
-        /* for(int items : Field.getFormatedField()){
-            for (int i = 0; i < Field.getFormatedField().length ; i++) {
-
-                if(items == 0){
-                    Stringarray[i] = " ";
-                }else{
-                    continue;
-                }
-
-            }
-        }
-
-         */
-
-
         int selector = 0;
 
-        for (int items : bsp) {
+        for (int items : Field.getFormattedField()) {
             if (items == 0) {
                 Stringarray[selector] = " ";
             } else {

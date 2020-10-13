@@ -1,7 +1,6 @@
 package Comp.Generate;
 
 import Fields.Field;
-import Fields.SmallField;
 
 public class Sudoku {
     public static Field Sudoku(){
