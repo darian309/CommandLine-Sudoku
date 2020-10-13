@@ -29,16 +29,15 @@ public class Field {
         SetField(Location, Wert);
     }
 
-    public SmallField[] FieldForDiego() {
-        return Field; // Field[int].getValue(int);
-    }
-
     public boolean getUserValue(int[] Location){
         return Field[Location[0]].getUserValue(Location[1]);
     }
     public boolean getUserValue(String FieldLocation){
         int[] Location = LocateField(FieldLocation);
         return Field[Location[0]].getUserValue(Location[1]);
+    }
+    public int getValue(int[] Location){
+        return Field[Location[0]].getValue(Location[1]);
     }
 
     public int[] LocateField(String Location) {
