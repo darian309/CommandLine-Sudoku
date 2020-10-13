@@ -8,7 +8,10 @@ import java.util.Scanner;
 
 public class userInteraction {
     Field Game;
-    public static void main(String[] args) {
+    public static void main(String[] args){
+
+        Templates.clearScreen();
+
         String Input;
         Field Game = Sudoku.Sudoku();
         LoadingScreen();
@@ -42,7 +45,7 @@ public class userInteraction {
             System.out.print("$");
             int Value = sc.nextInt();
             if(Value<=1 || Value >= 9){
-                System.out.println("New value cant be accepted!");
+                System.out.println("New value can't be accepted!");
                 return;
             }else{
                 if(!Game.getUserValue(Input)) {
@@ -72,28 +75,25 @@ public class userInteraction {
 
     public static String selectField(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Please Type:");
+        System.out.println(Templates.YELLOW + "Please Type:");
         System.out.println(" - 'y-axis':'x-axis' to select a Field");
         System.out.println(" - 'finish' to let the computer validate the field");
-        System.out.println(" - 'exit' to exit the game");
-        System.out.print("$");
+        System.out.println(" - 'exit' to exit the game\n" + Templates.RESET);
+        System.out.print("$ ");
         return sc.nextLine();
     }
-    private void printError(String msg){
 
-        String error = "[" + Templates.RED + "!" + Templates.RESET + "]" + msg;
-
-    }
     private static void LoadingScreen(){
 
         try {
-            System.out.print("Loading.");
+            System.out.print(Templates.GREEN + "Loading.");
             Thread.sleep(500);
             System.out.print(" .");
             Thread.sleep(500);
             System.out.print(" .");
             Thread.sleep(500);
-            System.out.println(" .\n");
+            System.out.println(" .\n" + Templates.RESET);
+            Templates.clearScreen();
         }catch (InterruptedException e){}
 
 
