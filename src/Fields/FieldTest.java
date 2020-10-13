@@ -1,9 +1,6 @@
 package Fields;
 
-import org.junit.Assert;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class FieldTest {
     Field game;
@@ -20,7 +17,7 @@ class FieldTest {
 
         }*/
         int[] values;
-        values = game.getFormatedField();
+        values = game.getFormattedField();
         int[] correctValues =
                 {
                         1,1,1,2,2,2,3,3,3,
