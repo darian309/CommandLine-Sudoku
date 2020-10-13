@@ -25,6 +25,8 @@ Wednesday:
 main Functionality; Debugging;
 
 issue Tracker:
--colomns not differenciated
+- colomns not differenciated
 - Field class converter funcions math revise
 - review diagramms
+- printCell function
+- colored UserValues
