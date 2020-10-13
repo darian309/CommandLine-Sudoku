@@ -1,2 +1,4 @@
-package Comp.Generate;public class Sudoku {
+package Comp.Generate;
+
+public class Sudoku {
 }
