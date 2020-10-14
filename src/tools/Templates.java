@@ -229,10 +229,9 @@ public class Templates {
         String separator = CYAN + "   ═════════════╬═════════════╬═════════════";
         String footer = "   └───┴───┴───┘║└───┴───┴───┘║└───┴───┴───┘" + RESET;
         String numerationHorizontal = CYAN + "     1   2   3     4   5   6     7   8   9";
-        String fieldColors;
 
 
-        String formattedString = CYAN + "│ " + fieldColors + "%s" + CYAN + " │ " + fieldColors + "%s" + CYAN + " │ " + fieldColors + "%s" + CYAN + " │║│ " + fieldColors + "%s" + CYAN + " │ " + fieldColors + "%s" + CYAN + " │ " + fieldColors + "%s" + CYAN + " │║│ " + fieldColors + "%s" + CYAN + " │ " + fieldColors + "%s" + CYAN + " │ " + fieldColors + "%s" + CYAN + " │\n";
+        String formattedString = CYAN + "│ " + BLUE + "%s" + CYAN + " │ " + BLUE + "%s" + CYAN + " │ " + BLUE + "%s" + CYAN + " │║│ " + BLUE + "%s" + CYAN + " │ " + BLUE + "%s" + CYAN + " │ " + BLUE + "%s" + CYAN + " │║│ " + BLUE + "%s" + CYAN + " │ " + BLUE + "%s" + CYAN + " │ " + BLUE + "%s" + CYAN + " │\n";
 
         String[] Stringarray = new String[81];
 
