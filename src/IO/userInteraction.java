@@ -48,7 +48,7 @@ public class userInteraction {
                 System.out.println(Templates.RED + "New value can't be accepted!" + Templates.RESET);
                 return;
             }else{
-                if(!Game.getUserValue(Input)) {
+                if(!Game.getUserValue(Integer.parseInt(Input))) {
                     System.out.println(Templates.RED + "Value cant be changed" + Templates.RESET);
                 }else{
                     Game.SetUserField(Input,Value);

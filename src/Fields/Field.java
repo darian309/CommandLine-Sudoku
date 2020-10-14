@@ -54,15 +54,46 @@ public class Field {
     private int[] LocateField(String Location) {
         char Y = Location.charAt(0);
         char X = Location.charAt(1);
-        int x = (int) Character.getNumericValue(X);
-        int y = (int) Character.getNumericValue(Y);
+        int x = Character.getNumericValue(X);
+        int y = Character.getNumericValue(Y);
+        int quadrant = 0;
         int[] result = new int[2];
 
+        if(x < 3 && y < 3){
 
-        //Return Quadrant
-        result[0] = x/3;
-        if(y>3||y<7){result[0] = result[0]*2;};
-        if(y>6||y<9){result[0] = result[0]*3;};
+            quadrant = 0;
+
+        }else if(x > 2  && x < 6 && y < 3){
+
+            quadrant = 1;
+
+        }else if(x > 5 && x <= 8 && y < 3){
+
+            quadrant = 2;
+
+        }else if (x < 3  && y < 6){
+
+            quadrant = 3;
+
+        }else if(x < 6  && x > 2 && y > 2 && y < 6){
+
+            quadrant = 4;
+
+        }else if(x > 5 && x < 9 && y > 2 && y < 6){
+
+            quadrant = 5;
+
+        }else if(x < 3 && y > 6 && y < 9){
+
+            quadrant = 6;
+
+        }else if(x > 2 && x < 6 && y > 5 && y < 9){
+
+            quadrant = 7;
+
+        }else if(x > 5 && x < 9 && y > 6 && y < 9){
+
+            quadrant = 8;
 
         //return field
         result[1] = (x+((y-1)*3))-1;
