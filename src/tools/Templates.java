@@ -30,14 +30,15 @@ public class Templates {
 
     }
 
-    public static void printCell(){
+    public static void printCell(int numberToShow){
 
+        // Templates for the Colorful output of the field numbers.
 
         String one =
                 PURPLE + "┌──────────────────┐\n" +
                 "│                  │\n" +
-                "│      " + GREEN + "▀▀▀▀▀▀" + PURPLE +"      │\n" +
-                PURPLE + "│    " + GREEN + "▀▀    ▀▀" + PURPLE + "      │\n" +
+                "│      " + GREEN + "▀▀▀▀▀▀" + PURPLE +"      │\n"  +
+                "│    " + GREEN + "▀▀    ▀▀" + PURPLE + "      │\n" +
                 "│          " + GREEN + "▀▀" + PURPLE + "      │\n" +
                 "│          " + GREEN + "▀▀" + PURPLE + "      │\n" +
                 "│          " + GREEN + "▀▀" + PURPLE + "      │\n" +
@@ -45,7 +46,6 @@ public class Templates {
                 PURPLE + "│                  │\n" +
                 "└──────────────────┘" + RESET;
 
-        System.out.println(one);
 
         String two =
                 PURPLE + "┌──────────────────┐\n" +
@@ -59,7 +59,6 @@ public class Templates {
                 "│                  │\n" +
                 "└──────────────────┘" + RESET;
 
-        System.out.println(two);
 
         String three =
                 PURPLE + "┌──────────────────┐\n" +
@@ -73,7 +72,6 @@ public class Templates {
                 "│                  │\n" +
                 "└──────────────────┘" + RESET;
 
-        System.out.println(three);
 
         String four =
                 PURPLE + "┌──────────────────┐\n" +
@@ -87,7 +85,6 @@ public class Templates {
                 "│                  │\n" +
                 "└──────────────────┘" + RESET;
 
-        System.out.println(four);
 
         String five =
                 PURPLE + "┌──────────────────┐\n" +
@@ -101,7 +98,6 @@ public class Templates {
                 "│                  │\n" +
                 "└──────────────────┘" + RESET;
 
-        System.out.println(five);
 
         String six =
                 PURPLE + "┌──────────────────┐\n" +
@@ -115,7 +111,6 @@ public class Templates {
                 "│                  │\n" +
                 "└──────────────────┘" + RESET;
 
-        System.out.println(six);
 
         String seven =
                 PURPLE + "┌──────────────────┐\n" +
@@ -129,7 +124,6 @@ public class Templates {
                 "│                  │\n" +
                 "└──────────────────┘" + RESET;
 
-        System.out.println(seven);
 
         String eight =
                 PURPLE + "┌──────────────────┐\n" +
@@ -143,7 +137,6 @@ public class Templates {
                 "│                  │\n" +
                 "└──────────────────┘" + RESET;
 
-        System.out.println(eight);
 
         String nine =
                 PURPLE + "┌──────────────────┐\n" +
@@ -157,7 +150,57 @@ public class Templates {
                 "│                  │\n" +
                 "└──────────────────┘" + RESET;
 
-        System.out.println(nine);
+        switch (numberToShow){
+
+            case 1:
+                clearScreen();
+                System.out.println(one);
+                break;
+
+            case 2:
+                clearScreen();
+                System.out.println(two);
+                break;
+
+            case 3:
+                clearScreen();
+                System.out.println(three);
+                break;
+
+            case 4:
+                clearScreen();
+                System.out.println(four);
+                break;
+
+            case 5:
+                clearScreen();
+                System.out.println(five);
+                break;
+
+            case 6:
+                clearScreen();
+                System.out.println(six);
+                break;
+
+            case 7:
+                clearScreen();
+                System.out.println(seven);
+                break;
+
+            case 8:
+                clearScreen();
+                System.out.println(eight);
+                break;
+
+            case 9:
+                clearScreen();
+                System.out.println(nine);
+                break;
+
+            default:
+                System.out.println("[ERROR] You tried to print a cell number that doesn't exist.");
+                break;
+        }
 
     }
 

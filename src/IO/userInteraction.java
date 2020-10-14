@@ -80,8 +80,6 @@ public class userInteraction {
         System.out.println(" - 'finish' to let the computer validate the field");
         System.out.println(" - 'exit' to exit the game\n" + Templates.RESET);
         System.out.print("$ ");
-        Templates.clearScreen();
-        Templates.printCell();
         return sc.nextLine();
     }
 
