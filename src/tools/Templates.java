@@ -2,6 +2,11 @@ package tools;
 
 import Fields.Field;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Random;
+// import Fields.Field;
+
 public class Templates {
 
     public static final String RESET = "\u001B[0m";
@@ -232,13 +237,13 @@ public class Templates {
         String[] Stringarray = new String[81];
 
         int selector = 0;
-        int[] IntArray= Field.getFormattedField();
-        for (int items : IntArray) {
+
+        for (int items : Field.getFormattedField()) {
             if (items == 0) {
                 Stringarray[selector] = " ";
             } else {
-                Stringarray[selector] = UserColorShow(Field, selector,String.valueOf(items));
-
+                Stringarray[selector] = String.valueOf(items);
+                qweqe(Field, selector);
             }
             selector++;
         }
@@ -272,83 +277,25 @@ public class Templates {
         System.out.println(intersection);
         System.out.printf("9  " + formattedString, Stringarray[72], Stringarray[73], Stringarray[74], Stringarray[75], Stringarray[76], Stringarray[77], Stringarray[78], Stringarray[79], Stringarray[80]);
         System.out.println(footer);
-        System.out.println(Stringarray);
-        System.out.println(IntArray.toString());
 
     }
 
-    public static String UserColorShow(Field Field, int indexToCheck, String Value){
+    public static String qweqe(Field Field, int indexToCheck){
         String fieldColor;
-        boolean user = Field.getUserValue(Fields.Field.ArrayToUserLocation(indexToCheck));
+        boolean user = Field.getUserValue(Integer.toString(indexToCheck));
 
         if(user){
 
-            fieldColor = GREEN + Value + CYAN;
+            fieldColor = GREEN;
 
         }else{
 
-            fieldColor = PURPLE + Value + CYAN;
+            fieldColor = PURPLE;
 
         }
 
         return fieldColor;
 
-    }
-    public static void printBoardD(Field Field) {
-
-        String header = "   ┌───┬───┬───┐║┌───┬───┬───┐║┌───┬───┬───┐";
-        String intersection = "   ├───┼───┼───┤║├───┼───┼───┤║├───┼───┼───┤";
-        String separator = CYAN + "   ═════════════╬═════════════╬═════════════";
-        String footer = "   └───┴───┴───┘║└───┴───┴───┘║└───┴───┴───┘" + RESET;
-        String numerationHorizontal = CYAN + "     1   2   3     4   5   6     7   8   9";
-        String fieldColors = "";
-
-
-        String formattedString = CYAN + "│ " + fieldColors + "%s" + CYAN + " │ " + fieldColors + "%s" + CYAN + " │ " + fieldColors + "%s" + CYAN + " │║│ " + fieldColors + "%s" + CYAN + " │ " + fieldColors + "%s" + CYAN + " │ " + fieldColors + "%s" + CYAN + " │║│ " + fieldColors + "%s" + CYAN + " │ " + fieldColors + "%s" + CYAN + " │ " + fieldColors + "%s" + CYAN + " │\n";
-
-        String[] Stringarray = new String[81];
-
-        int selector = 0;
-
-        for (int items : Field.getFormattedField()) {
-            if (items == 0) {
-                Stringarray[selector] = " ";
-            } else {
-                Stringarray[selector] = UserColorShow(Field, selector,String.valueOf(items));
-
-            }
-            selector++;
-        }
-
-
-        System.out.println(numerationHorizontal);
-        System.out.println(header);
-        System.out.println("1  " + CYAN + " │ " + Stringarray[0]+ CYAN + " │ " + Stringarray[1]+ CYAN + " │ " + Stringarray[2]+ CYAN + " │ " + Stringarray[3]+ CYAN + " │ " + Stringarray[4]+ CYAN + " │ " + Stringarray[5]+ CYAN + " │ " + Stringarray[6]+ CYAN + " │ " + Stringarray[7]+ CYAN + " │ " + Stringarray[8]);
-        System.out.println(intersection);
-        System.out.println("2  " + CYAN + " │ " + Stringarray[9]+ CYAN + " │ " + Stringarray[10]+ CYAN + " │ " + Stringarray[11]+ CYAN + " │ " + Stringarray[12]+ CYAN + " │ " + Stringarray[13]+ CYAN + " │ " + Stringarray[14]+ CYAN + " │ " + Stringarray[15]+ CYAN + " │ " + Stringarray[16]+ CYAN + " │ " + Stringarray[17]);
-        System.out.println(intersection);
-        System.out.println("3  " + CYAN + " │ " + Stringarray[18]+ CYAN + " │ " + Stringarray[19]+ CYAN + " │ " + Stringarray[20]+ CYAN + " │ " + Stringarray[21]+ CYAN + " │ " + Stringarray[22]+ CYAN + " │ " + Stringarray[23]+ CYAN + " │ " + Stringarray[24]+ CYAN + " │ " + Stringarray[25]+ CYAN + " │ " + Stringarray[26]);
-        System.out.println(footer);
-
-        System.out.println(separator);
-
-        System.out.println(header);
-        System.out.println("4  " + CYAN + " │ " +  Stringarray[27]+ CYAN + " │ " + Stringarray[28]+ CYAN + " │ " + Stringarray[29]+ CYAN + " │ " + Stringarray[30]+ CYAN + " │ " + Stringarray[31]+ CYAN + " │ " + Stringarray[32]+ CYAN + " │ " + Stringarray[33]+ CYAN + " │ " + Stringarray[34]+ CYAN + " │ " + Stringarray[35]);
-        System.out.println(intersection);
-        System.out.println("5  " + CYAN + " │ " + Stringarray[36]+ CYAN + " │ " + Stringarray[37]+ CYAN + " │ " + Stringarray[38]+ CYAN + " │ " + Stringarray[39]+ CYAN + " │ " + Stringarray[40]+ CYAN + " │ " + Stringarray[41]+ CYAN + " │ " + Stringarray[42]+ CYAN + " │ " + Stringarray[43]+ CYAN + " │ " + Stringarray[44]);
-        System.out.println(intersection);
-        System.out.println("6  " + CYAN + " │ " + Stringarray[45]+ CYAN + " │ " + Stringarray[46]+ CYAN + " │ " + Stringarray[47]+ CYAN + " │ " + Stringarray[48]+ CYAN + " │ " + Stringarray[49]+ CYAN + " │ " + Stringarray[50]+ CYAN + " │ " + Stringarray[51]+ CYAN + " │ " + Stringarray[52]+ CYAN + " │ " + Stringarray[53]);
-        System.out.println(footer);
-
-        System.out.println(separator);
-
-        System.out.println(header);
-        System.out.println("7  " + CYAN + " │ " + Stringarray[54]+ CYAN + " │ " + Stringarray[55]+ CYAN + " │ " + Stringarray[56]+ CYAN + " │ " + Stringarray[57]+ CYAN + " │ " + Stringarray[58]+ CYAN + " │ " + Stringarray[59]+ CYAN + " │ " + Stringarray[69]+ CYAN + " │ " + Stringarray[61]+ CYAN + " │ " + Stringarray[62]);
-        System.out.println(intersection);
-        System.out.println("8  " + CYAN + " │ " + Stringarray[63]+ CYAN + " │ " + Stringarray[64]+ CYAN + " │ " + Stringarray[65]+ CYAN + " │ " + Stringarray[66]+ CYAN + " │ " + Stringarray[67]+ CYAN + " │ " + Stringarray[68]+ CYAN + " │ " + Stringarray[69]+ CYAN + " │ " + Stringarray[70]+ CYAN + " │ " + Stringarray[71]);
-        System.out.println(intersection);
-        System.out.println("9  " + CYAN + " │ " + Stringarray[72] + CYAN + " │ " + Stringarray[73] + CYAN + " │ " + Stringarray[74]+ CYAN + " │ " + Stringarray[75]+ CYAN + " │ " + Stringarray[76]+ CYAN + " │ " + Stringarray[77]+ CYAN + " │ " + Stringarray[78] + CYAN + " │ " + Stringarray[79]+ CYAN + " │ " + Stringarray[80]);
-        System.out.println(footer);
     }
 
 }
