@@ -35,118 +35,130 @@ public class Templates {
         // Templates for the Colorful output of the field numbers.
 
         String one =
-                PURPLE + "┌──────────────────┐\n" +
+                BLUE + "┌──────────────────┐\n" +
                 "│                  │\n" +
-                "│      " + GREEN + "▀▀▀▀▀▀" + PURPLE +"      │\n"  +
-                "│    " + GREEN + "▀▀    ▀▀" + PURPLE + "      │\n" +
-                "│          " + GREEN + "▀▀" + PURPLE + "      │\n" +
-                "│          " + GREEN + "▀▀" + PURPLE + "      │\n" +
-                "│          " + GREEN + "▀▀" + PURPLE + "      │\n" +
-                "│     " + GREEN + "▀▀▀▀▀▀▀▀▀" + PURPLE + "    │\n" +
-                PURPLE + "│                  │\n" +
+                "│      " + GREEN + "▀▀▀▀▀▀" + BLUE +"      │\n"  +
+                "│    " + GREEN + "▀▀    ▀▀" + BLUE + "      │\n" +
+                "│          " + GREEN + "▀▀" + BLUE + "      │\n" +
+                "│          " + GREEN + "▀▀" + BLUE + "      │\n" +
+                "│          " + GREEN + "▀▀" + BLUE + "      │\n" +
+                "│     " + GREEN + "▀▀▀▀▀▀▀▀▀" + BLUE + "    │\n" +
+                BLUE + "│                  │\n" +
                 "└──────────────────┘" + RESET;
 
 
         String two =
-                PURPLE + "┌──────────────────┐\n" +
+                BLUE + "┌──────────────────┐\n" +
                 "│                  │\n" +
-                "│    " + GREEN + "▀▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
-                "│    " + GREEN + "▀▀     ▀▀" + PURPLE + "     │\n" +
-                "│           " + GREEN + "▀▀" + PURPLE + "     │\n" +
-                "│        " + GREEN + "▀▀" + PURPLE + "        │\n" +
-                "│      " + GREEN + "▀▀" + PURPLE + "          │\n" +
-                "│    " + GREEN + "▀▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
+                "│    " + GREEN + "▀▀▀▀▀▀▀▀▀" + BLUE + "     │\n" +
+                "│    " + GREEN + "▀▀     ▀▀" + BLUE + "     │\n" +
+                "│           " + GREEN + "▀▀" + BLUE + "     │\n" +
+                "│        " + GREEN + "▀▀" + BLUE + "        │\n" +
+                "│      " + GREEN + "▀▀" + BLUE + "          │\n" +
+                "│    " + GREEN + "▀▀▀▀▀▀▀▀▀" + BLUE + "     │\n" +
                 "│                  │\n" +
                 "└──────────────────┘" + RESET;
 
 
         String three =
-                PURPLE + "┌──────────────────┐\n" +
+                BLUE + "┌──────────────────┐\n" +
                 "│                  │\n" +
-                "│    " + GREEN + "▀▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
-                "│            " + GREEN + "▀▀" + PURPLE + "    │\n" +
-                "│          " + GREEN + "▀▀▀▀ " + PURPLE +  "   │\n" +
-                "│          " + GREEN + "▀▀▀▀ " + PURPLE +  "   │\n" +
-                "│            " + GREEN + "▀▀" + PURPLE + "    │\n" +
-                "│    " + GREEN + "▀▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
+                "│    " + GREEN + "▀▀▀▀▀▀▀▀▀" + BLUE + "     │\n" +
+                "│            " + GREEN + "▀▀" + BLUE + "    │\n" +
+                "│          " + GREEN + "▀▀▀▀ " + BLUE +  "   │\n" +
+                "│          " + GREEN + "▀▀▀▀ " + BLUE +  "   │\n" +
+                "│            " + GREEN + "▀▀" + BLUE + "    │\n" +
+                "│    " + GREEN + "▀▀▀▀▀▀▀▀▀" + BLUE + "     │\n" +
                 "│                  │\n" +
                 "└──────────────────┘" + RESET;
 
 
         String four =
-                PURPLE + "┌──────────────────┐\n" +
+                BLUE + "┌──────────────────┐\n" +
                 "│                  │\n" +
-                "│    " + GREEN + "▀▀     ▀▀" + PURPLE + "     │\n" +
-                "│    " + GREEN + "▀▀     ▀▀" + PURPLE + "     │\n" +
-                "│    " + GREEN + "▀▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
-                "│           " + GREEN + "▀▀" + PURPLE + "     │\n" +
-                "│           " + GREEN + "▀▀" + PURPLE + "     │\n" +
-                "│           " + GREEN + "▀▀" + PURPLE + "     │\n" +
+                "│    " + GREEN + "▀▀     ▀▀" + BLUE + "     │\n" +
+                "│    " + GREEN + "▀▀     ▀▀" + BLUE + "     │\n" +
+                "│    " + GREEN + "▀▀▀▀▀▀▀▀▀" + BLUE + "     │\n" +
+                "│           " + GREEN + "▀▀" + BLUE + "     │\n" +
+                "│           " + GREEN + "▀▀" + BLUE + "     │\n" +
+                "│           " + GREEN + "▀▀" + BLUE + "     │\n" +
                 "│                  │\n" +
                 "└──────────────────┘" + RESET;
 
 
         String five =
-                PURPLE + "┌──────────────────┐\n" +
+                BLUE + "┌──────────────────┐\n" +
                 "│                  │\n" +
-                "│    " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "      │\n" +
-                "│    " + GREEN + "▀▀▀" + PURPLE + "           │\n" +
-                "│    " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "      │\n" +
-                "│    " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "      │\n" +
-                "│        " + GREEN + "▀▀▀▀" + PURPLE + "      │\n" +
-                "│    " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "      │\n" +
+                "│    " + GREEN + "▀▀▀▀▀▀▀▀" + BLUE + "      │\n" +
+                "│    " + GREEN + "▀▀▀" + BLUE + "           │\n" +
+                "│    " + GREEN + "▀▀▀▀▀▀▀▀" + BLUE + "      │\n" +
+                "│    " + GREEN + "▀▀▀▀▀▀▀▀" + BLUE + "      │\n" +
+                "│        " + GREEN + "▀▀▀▀" + BLUE + "      │\n" +
+                "│    " + GREEN + "▀▀▀▀▀▀▀▀" + BLUE + "      │\n" +
                 "│                  │\n" +
                 "└──────────────────┘" + RESET;
 
 
         String six =
-                PURPLE + "┌──────────────────┐\n" +
+                BLUE + "┌──────────────────┐\n" +
                 "│                  │\n" +
-                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
-                "│     " + GREEN + "▀▀" + PURPLE + "           │\n" +
-                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
-                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
-                "│     " + GREEN + "▀▀    ▀▀" + PURPLE + "     │\n" +
-                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
+                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + BLUE + "     │\n" +
+                "│     " + GREEN + "▀▀" + BLUE + "           │\n" +
+                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + BLUE + "     │\n" +
+                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + BLUE + "     │\n" +
+                "│     " + GREEN + "▀▀    ▀▀" + BLUE + "     │\n" +
+                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + BLUE + "     │\n" +
                 "│                  │\n" +
                 "└──────────────────┘" + RESET;
 
 
         String seven =
-                PURPLE + "┌──────────────────┐\n" +
+                BLUE + "┌──────────────────┐\n" +
                 "│                  │\n" +
-                "│    " + GREEN + "▀▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
-                "│    " + GREEN + "▀▀     ▀▀" + PURPLE + "     │\n" +
-                "│           " + GREEN + "▀▀" + PURPLE + "     │\n" +
-                "│           " + GREEN + "▀▀" + PURPLE + "     │\n" +
-                "│           " + GREEN + "▀▀" + PURPLE + "     │\n" +
-                "│           " + GREEN + "▀▀" + PURPLE + "     │\n" +
+                "│    " + GREEN + "▀▀▀▀▀▀▀▀▀" + BLUE + "     │\n" +
+                "│    " + GREEN + "▀▀     ▀▀" + BLUE + "     │\n" +
+                "│           " + GREEN + "▀▀" + BLUE + "     │\n" +
+                "│           " + GREEN + "▀▀" + BLUE + "     │\n" +
+                "│           " + GREEN + "▀▀" + BLUE + "     │\n" +
+                "│           " + GREEN + "▀▀" + BLUE + "     │\n" +
                 "│                  │\n" +
                 "└──────────────────┘" + RESET;
 
 
         String eight =
-                PURPLE + "┌──────────────────┐\n" +
+                BLUE + "┌──────────────────┐\n" +
                 "│                  │\n" +
-                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
-                "│     " + GREEN + "▀▀    ▀▀" + PURPLE + "     │\n" +
-                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
-                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
-                "│     " + GREEN + "▀▀    ▀▀" + PURPLE + "     │\n" +
-                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
+                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + BLUE + "     │\n" +
+                "│     " + GREEN + "▀▀    ▀▀" + BLUE + "     │\n" +
+                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + BLUE + "     │\n" +
+                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + BLUE + "     │\n" +
+                "│     " + GREEN + "▀▀    ▀▀" + BLUE + "     │\n" +
+                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + BLUE + "     │\n" +
                 "│                  │\n" +
                 "└──────────────────┘" + RESET;
 
 
         String nine =
-                PURPLE + "┌──────────────────┐\n" +
+                BLUE + "┌──────────────────┐\n" +
                 "│                  │\n" +
-                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
-                "│     " + GREEN + "▀▀    ▀▀" + PURPLE + "     │\n" +
-                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
-                "│           " + GREEN + "▀▀" + PURPLE + "     │\n" +
-                "│           " + GREEN + "▀▀" + PURPLE + "     │\n" +
-                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
+                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + BLUE + "     │\n" +
+                "│     " + GREEN + "▀▀    ▀▀" + BLUE + "     │\n" +
+                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + BLUE + "     │\n" +
+                "│           " + GREEN + "▀▀" + BLUE + "     │\n" +
+                "│           " + GREEN + "▀▀" + BLUE + "     │\n" +
+                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + BLUE + "     │\n" +
+                "│                  │\n" +
+                "└──────────────────┘" + RESET;
+
+        String zero =
+                BLUE + "┌──────────────────┐\n" +
+                "│                  │\n" +
+                "│                  │\n" +
+                "│                  │\n" +
+                "│                  │\n" +
+                "│                  │\n" +
+                "│                  │\n" +
+                "│                  │\n" +
                 "│                  │\n" +
                 "└──────────────────┘" + RESET;
 
@@ -197,6 +209,11 @@ public class Templates {
                 System.out.println(nine);
                 break;
 
+            case 0:
+                clearScreen();
+                System.out.println(zero);
+                break;
+
             default:
                 System.out.println("[ERROR] You tried to print a cell number that doesn't exist.");
                 break;
@@ -211,7 +228,7 @@ public class Templates {
         String separator = CYAN + "   ═════════════╬═════════════╬═════════════";
         String footer = "   └───┴───┴───┘║└───┴───┴───┘║└───┴───┴───┘" + RESET;
         String numerationHorizontal = CYAN + "     1   2   3     4   5   6     7   8   9";
-        String formattedString = CYAN + "│ " + PURPLE + "%s" + CYAN + " │ " + PURPLE + "%s" + CYAN + " │ " + PURPLE + "%s" + CYAN + " │║│ " + PURPLE + "%s" + CYAN + " │ " + PURPLE + "%s" + CYAN + " │ " + PURPLE + "%s" + CYAN + " │║│ " + PURPLE + "%s" + CYAN + " │ " + PURPLE + "%s" + CYAN + " │ " + PURPLE + "%s" + CYAN + " │\n";
+        String formattedString = CYAN + "│ " + BLUE + "%s" + CYAN + " │ " + BLUE + "%s" + CYAN + " │ " + BLUE + "%s" + CYAN + " │║│ " + BLUE + "%s" + CYAN + " │ " + BLUE + "%s" + CYAN + " │ " + BLUE + "%s" + CYAN + " │║│ " + BLUE + "%s" + CYAN + " │ " + BLUE + "%s" + CYAN + " │ " + BLUE + "%s" + CYAN + " │\n";
 
         String[] Stringarray = new String[81];
 
