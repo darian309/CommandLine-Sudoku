@@ -221,6 +221,7 @@ public class Templates {
 
     }
 
+
     public static void printBoard(Field Field) {
 
         String header = "   ┌───┬───┬───┐║┌───┬───┬───┐║┌───┬───┬───┐";
@@ -228,7 +229,10 @@ public class Templates {
         String separator = CYAN + "   ═════════════╬═════════════╬═════════════";
         String footer = "   └───┴───┴───┘║└───┴───┴───┘║└───┴───┴───┘" + RESET;
         String numerationHorizontal = CYAN + "     1   2   3     4   5   6     7   8   9";
-        String formattedString = CYAN + "│ " + BLUE + "%s" + CYAN + " │ " + BLUE + "%s" + CYAN + " │ " + BLUE + "%s" + CYAN + " │║│ " + BLUE + "%s" + CYAN + " │ " + BLUE + "%s" + CYAN + " │ " + BLUE + "%s" + CYAN + " │║│ " + BLUE + "%s" + CYAN + " │ " + BLUE + "%s" + CYAN + " │ " + BLUE + "%s" + CYAN + " │\n";
+        String fieldColors;
+
+
+        String formattedString = CYAN + "│ " + fieldColors + "%s" + CYAN + " │ " + fieldColors + "%s" + CYAN + " │ " + fieldColors + "%s" + CYAN + " │║│ " + fieldColors + "%s" + CYAN + " │ " + fieldColors + "%s" + CYAN + " │ " + fieldColors + "%s" + CYAN + " │║│ " + fieldColors + "%s" + CYAN + " │ " + fieldColors + "%s" + CYAN + " │ " + fieldColors + "%s" + CYAN + " │\n";
 
         String[] Stringarray = new String[81];
 
@@ -239,8 +243,9 @@ public class Templates {
                 Stringarray[selector] = " ";
             } else {
                 Stringarray[selector] = String.valueOf(items);
+                qweqe(Field, selector);
             }
-            selector ++;
+            selector++;
         }
 
 
@@ -274,5 +279,24 @@ public class Templates {
         System.out.println(footer);
 
     }
+
+    public static String qweqe(Field Field, int indexToCheck){
+        String fieldColor;
+        boolean user = Field.getUserValue(Integer.toString(indexToCheck));
+
+        if(user){
+
+            fieldColor = GREEN;
+
+        }else{
+
+            fieldColor = PURPLE;
+
+        }
+
+        return fieldColor;
+
+    }
+
 }
 
