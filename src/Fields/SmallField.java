@@ -1,17 +1,16 @@
 package Fields;
 
+import java.util.Arrays;
+
 public class SmallField {
-    private int[] SField;
-    private boolean[] ifUserValue;
+    private int[] SField = {0,0,0,0,0,0,0,0,0};
+    private boolean[] ifUserValue = {false,false,false,false,false,false,false,false,false};
 
     SmallField(){
-        SField = new int[9];
-        int[] SField = {0,0,0,0,0,0,0,0,0};
-        boolean[] ifUserValue = {false,false,false,false,false,false,false,false,false};
+
     }
     SmallField(int v){
-        SField = new int[9];
-        int[] SField = {v,v,v,v,v,v,v,v,v};
+        Arrays.fill(SField, v);
     }
     public void Change(int location, int wert){
         SField[location] = wert;

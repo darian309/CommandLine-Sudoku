@@ -54,8 +54,8 @@ public class Field {
     private int[] LocateField(String Location) {
         char Y = Location.charAt(0);
         char X = Location.charAt(1);
-        int x = (int) Character.getNumericValue(X);
-        int y = (int) Character.getNumericValue(Y);
+        int x = Character.getNumericValue(X);
+        int y = Character.getNumericValue(Y);
         int[] result = new int[2];
 
 
