@@ -13,7 +13,7 @@ public class userInteraction {
         Templates.clearScreen();
 
         String Input;
-        Field Game = Sudoku.Sudoku();
+        Field Game = Sudoku.TestSudoku();
         LoadingScreen();
         Game.SetUserField("83",4);
 

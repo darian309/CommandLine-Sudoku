@@ -2,7 +2,7 @@ package Fields;
 
 public class SmallField {
     private int[] SField;
-    private boolean[] ifUserInput;
+    private boolean[] ifUserValue;
 
     SmallField(){
         SField = new int[9];
@@ -23,5 +23,5 @@ public class SmallField {
     public int getValue(int location) {
         return SField[location];
     }
-    public boolean getUserValue(int wert){return ifUserInput[wert];}
+    public boolean getUserValue(int wert){return ifUserValue[wert];}
 }
