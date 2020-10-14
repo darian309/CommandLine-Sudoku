@@ -91,12 +91,13 @@ public class Field {
 
             quadrant = 7;
 
-        }else if(x > 5 && x < 9 && y > 6 && y < 9){
+        }else if(x > 5 && x < 9 && y > 6 && y < 9) {
 
             quadrant = 8;
+        }
 
         //return field
-        result[1] = (x+((y-1)*3))-1;
+        result[1] = ((x/3)+(((y/3)-1)*3))-1;
         return result;
     }
 
@@ -400,8 +401,7 @@ public class Field {
                 xyCoords = "NOT FOUND";
 
         }
-
-        return xyCoords;
+        return String.valueOf(Integer.valueOf(xyCoords)+11);
     }
 
     public int[] getFormattedField(){
