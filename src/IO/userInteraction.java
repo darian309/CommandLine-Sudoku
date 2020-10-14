@@ -37,7 +37,7 @@ public class userInteraction {
             if(coordinate.charAt(0) <= 48 || coordinate.charAt(0) >= 57){System.out.println("Your value is not correct!");return;}
             if(coordinate.charAt(1) <= 48 || coordinate.charAt(1) >= 57){System.out.println("Your value is not correct!");return;}
             Scanner sc = new Scanner(System.in);
-            //Templates.printCell();
+            // Templates.printCell(Input);
             System.out.println("\nPlease input new value for this cell!");
             System.out.print("$");
             int Value = sc.nextInt();

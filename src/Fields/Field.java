@@ -21,9 +21,12 @@ public class Field {
         int[] Location = LocateField(FieldLocation);
         SetUserField(Location, Wert);
     }
+
+
     public void SetField(int[] Location, int Wert){
         Field[Location[0]].Change(Location[1],Wert);
     }
+
     public void SetField(String FieldLocation, int Wert){
         int[] Location = LocateField(FieldLocation);
         SetField(Location, Wert);
@@ -34,13 +37,19 @@ public class Field {
     }
     public boolean getUserValue(String FieldLocation){
         int[] Location = LocateField(FieldLocation);
-        return Field[Location[0]].getUserValue(Location[1]);
+        return getUserValue(Location);
     }
+
+
     public int getValue(int[] Location){
         return Field[Location[0]].getValue(Location[1]);
     }
+    public int gatValue(String FieldLocation){
+        int[] Location = LocateField(FieldLocation);
+        return getValue(Location);
+    }
 
-    public int[] LocateField(String Location) {
+    private int[] LocateField(String Location) {
         //TODO: Error Handling
         char Y = Location.charAt(0);
         char X = Location.charAt(1);
@@ -58,7 +67,9 @@ public class Field {
         result[1] = (x/3)+((y/3)-1);
         return result;
     }
+
     public static String ArrayToUserLocation(int x){
+        //TODO:Correct Math
         int z, y;
         z = Math.floorMod(x+1,9);
         if(z==0){z++;}
@@ -67,36 +78,37 @@ public class Field {
     }
 
     public int[] getFormattedField(){
+
         int[] values = new int[81];
         int i;
         // put values of Fields in a Ro for Row order
-        for(i= 0;i<= 2;i++){values[i] = Field[0].getValue(i);}//
+        for(i= 0;i<= 2;i++){values[i] = Field[0].getValue(/*      */i);}//
         for(i= 3;i<= 5;i++){values[i] = Field[1].getValue(i- 3);}
         for(i= 6;i<= 8;i++){values[i] = Field[2].getValue(i- 6);}
-        for(i= 9;i<=11;i++){values[i] = Field[0].getValue(i- 9);}
-        for(i=12;i<=14;i++){values[i] = Field[1].getValue(i-12);}
-        for(i=15;i<=17;i++){values[i] = Field[2].getValue(i-15);}
-        for(i=18;i<=20;i++){values[i] = Field[0].getValue(i-18);}
-        for(i=21;i<=23;i++){values[i] = Field[1].getValue(i-21);}
-        for(i=24;i<=26;i++){values[i] = Field[2].getValue(i-24);} //
-        for(i=27;i<=29;i++){values[i] = Field[3].getValue(i-27);}
+        for(i= 9;i<=11;i++){values[i] = Field[0].getValue(i- 6);}
+        for(i=12;i<=14;i++){values[i] = Field[1].getValue(i- 9);}
+        for(i=15;i<=17;i++){values[i] = Field[2].getValue(i-12);}
+        for(i=18;i<=20;i++){values[i] = Field[0].getValue(i-12);}
+        for(i=21;i<=23;i++){values[i] = Field[1].getValue(i-15);}
+        for(i=24;i<=26;i++){values[i] = Field[2].getValue(i-18);}
+        for(i=27;i<=29;i++){values[i] = Field[3].getValue(i-27);}//
         for(i=30;i<=32;i++){values[i] = Field[4].getValue(i-30);}
         for(i=33;i<=35;i++){values[i] = Field[5].getValue(i-33);}
-        for(i=36;i<=38;i++){values[i] = Field[3].getValue(i-36);}
-        for(i=39;i<=41;i++){values[i] = Field[4].getValue(i-39);}
-        for(i=42;i<=44;i++){values[i] = Field[5].getValue(i-42);}
-        for(i=45;i<=47;i++){values[i] = Field[3].getValue(i-45);}
-        for(i=48;i<=50;i++){values[i] = Field[4].getValue(i-48);}
-        for(i=51;i<=53;i++){values[i] = Field[5].getValue(i-51);} //
-        for(i=54;i<=56;i++){values[i] = Field[6].getValue(i-54);}
+        for(i=36;i<=38;i++){values[i] = Field[3].getValue(i-33);}
+        for(i=39;i<=41;i++){values[i] = Field[4].getValue(i-36);}
+        for(i=42;i<=44;i++){values[i] = Field[5].getValue(i-39);}
+        for(i=45;i<=47;i++){values[i] = Field[3].getValue(i-39);}
+        for(i=48;i<=50;i++){values[i] = Field[4].getValue(i-42);}
+        for(i=51;i<=53;i++){values[i] = Field[5].getValue(i-45);}
+        for(i=54;i<=56;i++){values[i] = Field[6].getValue(i-51);}//
         for(i=57;i<=59;i++){values[i] = Field[7].getValue(i-57);}
         for(i=60;i<=62;i++){values[i] = Field[8].getValue(i-60);}
-        for(i=63;i<=65;i++){values[i] = Field[6].getValue(i-63);}
-        for(i=66;i<=68;i++){values[i] = Field[7].getValue(i-66);}
-        for(i=69;i<=71;i++){values[i] = Field[8].getValue(i-69);}
-        for(i=72;i<=74;i++){values[i] = Field[6].getValue(i-72);}
-        for(i=75;i<=77;i++){values[i] = Field[7].getValue(i-75);}
-        for(i=78;i<=80;i++){values[i] = Field[8].getValue(i-78);} //
+        for(i=63;i<=65;i++){values[i] = Field[6].getValue(i-60);}
+        for(i=66;i<=68;i++){values[i] = Field[7].getValue(i-63);}
+        for(i=69;i<=71;i++){values[i] = Field[8].getValue(i-66);}
+        for(i=72;i<=74;i++){values[i] = Field[6].getValue(i-66);}
+        for(i=75;i<=77;i++){values[i] = Field[7].getValue(i-69);}
+        for(i=78;i<=80;i++){values[i] = Field[8].getValue(i-72);} //
         return values;
     }
 
