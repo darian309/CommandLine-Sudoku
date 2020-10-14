@@ -18,7 +18,7 @@ public class userInteraction {
         Game.SetUserField("83",4);
 
         while (true){
-            Templates.printBoard(Game);
+            Templates.printBoardD(Game);
             Input = selectField();
             if(Input.contains("exit")){
                 System.exit(0);
