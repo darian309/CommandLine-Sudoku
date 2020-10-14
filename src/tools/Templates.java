@@ -47,6 +47,20 @@ public class Templates {
 
         System.out.println(one);
 
+        String two =
+                PURPLE + "┌──────────────────┐\n" +
+                "│                  │\n" +
+                "│    " + GREEN + "▀▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
+                "│    " + GREEN + "▀▀     ▀▀" + PURPLE + "     │\n" +
+                "│           " + GREEN + "▀▀" + PURPLE + "     │\n" +
+                "│        " + GREEN + "▀▀" + PURPLE + "        │\n" +
+                "│      " + GREEN + "▀▀" + PURPLE + "          │\n" +
+                "│    " + GREEN + "▀▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
+                "│                  │\n" +
+                "└──────────────────┘" + RESET;
+
+        System.out.println(two);
+
         String three =
                 PURPLE + "┌──────────────────┐\n" +
                 "│                  │\n" +
@@ -61,6 +75,48 @@ public class Templates {
 
         System.out.println(three);
 
+        String four =
+                PURPLE + "┌──────────────────┐\n" +
+                "│                  │\n" +
+                "│    " + GREEN + "▀▀     ▀▀" + PURPLE + "     │\n" +
+                "│    " + GREEN + "▀▀     ▀▀" + PURPLE + "     │\n" +
+                "│    " + GREEN + "▀▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
+                "│           " + GREEN + "▀▀" + PURPLE + "     │\n" +
+                "│           " + GREEN + "▀▀" + PURPLE + "     │\n" +
+                "│           " + GREEN + "▀▀" + PURPLE + "     │\n" +
+                "│                  │\n" +
+                "└──────────────────┘" + RESET;
+
+        System.out.println(four);
+
+        String five =
+                PURPLE + "┌──────────────────┐\n" +
+                "│                  │\n" +
+                "│    " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "      │\n" +
+                "│    " + GREEN + "▀▀▀" + PURPLE + "           │\n" +
+                "│    " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "      │\n" +
+                "│    " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "      │\n" +
+                "│        " + GREEN + "▀▀▀▀" + PURPLE + "      │\n" +
+                "│    " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "      │\n" +
+                "│                  │\n" +
+                "└──────────────────┘" + RESET;
+
+        System.out.println(five);
+
+        String six =
+                PURPLE + "┌──────────────────┐\n" +
+                "│                  │\n" +
+                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
+                "│     " + GREEN + "▀▀" + PURPLE + "           │\n" +
+                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
+                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
+                "│     " + GREEN + "▀▀    ▀▀" + PURPLE + "     │\n" +
+                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
+                "│                  │\n" +
+                "└──────────────────┘" + RESET;
+
+        System.out.println(six);
+
         String seven =
                 PURPLE + "┌──────────────────┐\n" +
                 "│                  │\n" +
@@ -74,6 +130,34 @@ public class Templates {
                 "└──────────────────┘" + RESET;
 
         System.out.println(seven);
+
+        String eight =
+                PURPLE + "┌──────────────────┐\n" +
+                "│                  │\n" +
+                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
+                "│     " + GREEN + "▀▀    ▀▀" + PURPLE + "     │\n" +
+                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
+                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
+                "│     " + GREEN + "▀▀    ▀▀" + PURPLE + "     │\n" +
+                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
+                "│                  │\n" +
+                "└──────────────────┘" + RESET;
+
+        System.out.println(eight);
+
+        String nine =
+                PURPLE + "┌──────────────────┐\n" +
+                "│                  │\n" +
+                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
+                "│     " + GREEN + "▀▀    ▀▀" + PURPLE + "     │\n" +
+                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
+                "│           " + GREEN + "▀▀" + PURPLE + "     │\n" +
+                "│           " + GREEN + "▀▀" + PURPLE + "     │\n" +
+                "│     " + GREEN + "▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
+                "│                  │\n" +
+                "└──────────────────┘" + RESET;
+
+        System.out.println(nine);
 
     }
 
