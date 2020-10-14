@@ -1,7 +1,5 @@
 package Comp.Generate;
 
-import Fields.Field;
-
 public class Sudoku {
     public static Field Sudoku(){
         Field game = new Field();
