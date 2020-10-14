@@ -32,25 +32,26 @@ public class Field {
         SetField(Location, Wert);
     }
 
+    /*public boolean getUserValue(int FieldLocation){
+        int[] Location = LocateField(String.valueOf(FieldLocation));
+        return getUserValue(Location);
+    }*/
     public boolean getUserValue(int[] Location){
         return Field[Location[0]].getUserValue(Location[1]);
     }
-    public boolean getUserValue(String FieldLocation){
-        int[] Location = LocateField(FieldLocation);
-        return getUserValue(Location);
-    }
+
 
 
     public int getValue(int[] Location){
         return Field[Location[0]].getValue(Location[1]);
     }
-    public int gatValue(String FieldLocation){
-        int[] Location = LocateField(FieldLocation);
+    public int getValue(String FieldLocation){
+        String SLocation = ArrayToUserLocation(Integer.getInteger(FieldLocation));
+        int[] Location = LocateField(SLocation);
         return getValue(Location);
     }
 
     private int[] LocateField(String Location) {
-        //TODO: Error Handling
         char Y = Location.charAt(0);
         char X = Location.charAt(1);
         int x = (int) Character.getNumericValue(X);
@@ -415,5 +416,11 @@ public class Field {
     public boolean SolveSudoku() {
         int[] FField = getFormattedField();
         return Solve.Solve(FField, Field);
+    }
+
+    public boolean getUserValue(int FieldLocation) {
+        String SLocation = ArrayToUserLocation(FieldLocation);
+        int[] Location = LocateField(SLocation);
+        return getUserValue(Location);
     }
 }
