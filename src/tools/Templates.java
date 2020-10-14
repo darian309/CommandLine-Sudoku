@@ -305,6 +305,11 @@ public class Templates {
             selector++;
         }
 
+        for(String stuff : Stringarray){
+
+            System.out.println(stuff);
+
+        }
 
         System.out.println(numerationHorizontal);
         System.out.println(header);

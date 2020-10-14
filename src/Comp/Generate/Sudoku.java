@@ -3,6 +3,8 @@ package Comp.Generate;
 import Fields.Field;
 import IO.userInteraction;
 
+import java.util.Arrays;
+
 public class Sudoku {
     public static void main(){
         String[] s = new String[1];

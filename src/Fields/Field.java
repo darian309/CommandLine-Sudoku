@@ -95,7 +95,7 @@ public class Field {
         }
 
         //return field
-        result[1] = (x + ((y - 1) * 3)) - 1;
+        result[1] = ((x/3)+(((y/3)-1)*3))-1;
         return result;
 
     }
@@ -401,7 +401,9 @@ public class Field {
 
         }
 
-        return xyCoords;
+        int updatedCords = Integer.parseInt(xyCoords) + 11;
+        System.out.println(updatedCords);
+        return String.valueOf(updatedCords);
     }
 
     public int[] getFormattedField(){
@@ -490,6 +492,7 @@ public class Field {
         for (i = 78; i <= 80; i++) {
             values[i] = Field[8].getValue(i - 72);
         } //
+
         return values;
     }
 
