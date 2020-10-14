@@ -65,7 +65,7 @@ public class Field {
         if(y>6||y<9){result[0] = result[0]*3;};
 
         //return field
-        result[1] = (x/3)+((y/3));
+        result[1] = (x+((y-1)*3))-1;
         return result;
     }
 
