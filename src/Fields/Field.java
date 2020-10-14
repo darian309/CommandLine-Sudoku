@@ -5,7 +5,7 @@ import Comp.Solve.Solve;
 public class Field {
     private SmallField[] Field;
 
-    private Field(){
+    public Field(){
         Field = new SmallField[9];
         for(int i=0;i<=8;i++){
             Field[i] = new SmallField();
@@ -13,25 +13,40 @@ public class Field {
     }
 
 
-
+    public void SetUserField(int[] Location, int Wert){
+        Field[Location[0]].Change(Location[1],Wert);
+        Field[Location[0]].ChangeUserValue(Location[1],Wert);
+    }
+    public void SetUserField(String FieldLocation, int Wert){
+        int[] Location = LocateField(FieldLocation);
+        SetUserField(Location, Wert);
+    }
     public void SetField(int[] Location, int Wert){
         Field[Location[0]].Change(Location[1],Wert);
     }
     public void SetField(String FieldLocation, int Wert){
         int[] Location = LocateField(FieldLocation);
-        Field[Location[0]].Change(Location[1],Wert);
+        SetField(Location, Wert);
     }
 
-    public SmallField[] FieldForDiego() {
-        return Field; // Field[int].getValue(int);
+    public boolean getUserValue(int[] Location){
+        return Field[Location[0]].getUserValue(Location[1]);
+    }
+    public boolean getUserValue(String FieldLocation){
+        int[] Location = LocateField(FieldLocation);
+        return Field[Location[0]].getUserValue(Location[1]);
+    }
+    public int getValue(int[] Location){
+        return Field[Location[0]].getValue(Location[1]);
     }
 
-    private int[] LocateField(String Location) {
+    public int[] LocateField(String Location) {
         //TODO: Error Handling
-        int y = (int) Location.charAt(0);
-        int x = (int) Location.charAt(1);
+        char Y = Location.charAt(0);
+        char X = Location.charAt(1);
+        int x = (int) Character.getNumericValue(X);
+        int y = (int) Character.getNumericValue(Y);
         int[] result = new int[2];
-        SmallField hey = new SmallField();
 
 
         //Return Quadrant
@@ -43,23 +58,22 @@ public class Field {
         result[1] = (x/3)+((y/3)-1);
         return result;
     }
-
-<<<<<<< HEAD
-
-    public SmallField[] FieldForDiego() {
-        return Field; // Field[int].getValue(int);
+    public static String ArrayToUserLocation(int x){
+        int z, y;
+        z = Math.floorMod(x+1,9);
+        if(z==0){z++;}
+        y = Math.floorMod(x/z,9);
+        return String.valueOf(y) + String.valueOf(z);
     }
 
-=======
->>>>>>> e3365588d04180b32bc248ab47852e81b27a0b61
-    public int[] getFormatedField(){
+    public int[] getFormattedField(){
         int[] values = new int[81];
         int i;
         // put values of Fields in a Ro for Row order
         for(i= 0;i<= 2;i++){values[i] = Field[0].getValue(i);}//
-        for(i= 3;i<= 5;i++){values[i] = Field[1].getValue(i-3);}
-        for(i= 6;i<= 8;i++){values[i] = Field[2].getValue(i-6);}
-        for(i= 9;i<=11;i++){values[i] = Field[0].getValue(i-9);}
+        for(i= 3;i<= 5;i++){values[i] = Field[1].getValue(i- 3);}
+        for(i= 6;i<= 8;i++){values[i] = Field[2].getValue(i- 6);}
+        for(i= 9;i<=11;i++){values[i] = Field[0].getValue(i- 9);}
         for(i=12;i<=14;i++){values[i] = Field[1].getValue(i-12);}
         for(i=15;i<=17;i++){values[i] = Field[2].getValue(i-15);}
         for(i=18;i<=20;i++){values[i] = Field[0].getValue(i-18);}
@@ -85,12 +99,14 @@ public class Field {
         for(i=78;i<=80;i++){values[i] = Field[8].getValue(i-78);} //
         return values;
     }
+
+
     public SmallField[] getField(){
         return Field;
     }
 
     public boolean SolveSudoku() {
-        int[] FField = getFormatedField();
+        int[] FField = getFormattedField();
         return Solve.Solve(FField, Field);
     }
 }

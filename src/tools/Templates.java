@@ -1,5 +1,7 @@
 package tools;
 
+import Fields.Field;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
@@ -17,29 +19,65 @@ public class Templates {
     public static final String CYAN = "\u001B[36m";
     public static final String WHITE = "\u001B[37m";
 
-    public static void main(String[] args) {
+    public static void clearScreen() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
 
-        Field passedField = new Field();
+    public static void printError(String msg){
 
-        printBoard(Field);
+        String error = "[" + Templates.RED + "!" + Templates.RESET + "]" + msg;
+
+    }
+
+    public static void printCell(){
+
+
+        String one =
+                PURPLE + "┌──────────────────┐\n" +
+                "│                  │\n" +
+                "│      " + GREEN + "▀▀▀▀▀▀" + PURPLE +"      │\n" +
+                PURPLE + "│    " + GREEN + "▀▀    ▀▀" + PURPLE + "      │\n" +
+                "│          " + GREEN + "▀▀" + PURPLE + "      │\n" +
+                "│          " + GREEN + "▀▀" + PURPLE + "      │\n" +
+                "│          " + GREEN + "▀▀" + PURPLE + "      │\n" +
+                "│     " + GREEN + "▀▀▀▀▀▀▀▀▀" + PURPLE + "    │\n" +
+                PURPLE + "│                  │\n" +
+                "└──────────────────┘" + RESET;
+
+        System.out.println(one);
+
+        String three =
+                PURPLE + "┌──────────────────┐\n" +
+                "│                  │\n" +
+                "│    " + GREEN + "▀▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
+                "│            " + GREEN + "▀▀" + PURPLE + "    │\n" +
+                "│          " + GREEN + "▀▀▀▀ " + PURPLE +  "   │\n" +
+                "│          " + GREEN + "▀▀▀▀ " + PURPLE +  "   │\n" +
+                "│            " + GREEN + "▀▀" + PURPLE + "    │\n" +
+                "│    " + GREEN + "▀▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
+                "│                  │\n" +
+                "└──────────────────┘" + RESET;
+
+        System.out.println(three);
+
+        String seven =
+                PURPLE + "┌──────────────────┐\n" +
+                "│                  │\n" +
+                "│    " + GREEN + "▀▀▀▀▀▀▀▀▀" + PURPLE + "     │\n" +
+                "│    " + GREEN + "▀▀     ▀▀" + PURPLE + "     │\n" +
+                "│           " + GREEN + "▀▀" + PURPLE + "     │\n" +
+                "│           " + GREEN + "▀▀" + PURPLE + "     │\n" +
+                "│           " + GREEN + "▀▀" + PURPLE + "     │\n" +
+                "│           " + GREEN + "▀▀" + PURPLE + "     │\n" +
+                "│                  │\n" +
+                "└──────────────────┘" + RESET;
+
+        System.out.println(seven);
 
     }
 
     public static void printBoard(Field Field) {
-
-    /*
-        int[] bsp = new int[81];
-
-        Random rand = new Random();
-
-        for (int i = 0; i < 81; i++) {
-
-            int rand_int1 = rand.nextInt(10);
-            bsp[i] = rand_int1;
-
-        }
-
-     */
 
         String header = "   ┌───┬───┬───┐║┌───┬───┬───┐║┌───┬───┬───┐";
         String intersection = "   ├───┼───┼───┤║├───┼───┼───┤║├───┼───┼───┤";
