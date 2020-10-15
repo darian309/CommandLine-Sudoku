@@ -1,0 +1,9 @@
+x = row*ncols+col
+
+x - col = row*ncols
+x - col / ncols = row
+
+
+y /ncols*row = col
+
+21 - 2 / 9 = row
